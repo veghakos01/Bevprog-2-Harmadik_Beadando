@@ -3,6 +3,7 @@
 #include "kivalw.hpp"
 #include "Elem.hpp"
 #include "kijelzo.hpp"
+#include "Tank.hpp"
 
 using namespace std;
 
@@ -19,6 +20,9 @@ private:
     kivalw* j2_lovedek;
 
     kijelzo* szel;
+
+    Tank* player1;
+    Tank* player2;
 
 
 public:
@@ -43,6 +47,11 @@ public:
         j2_lovedek->add("megegy");
 
         szel = new kijelzo(W/2-25,50,50,50,1,this,0);
+
+        player1 = new Tank(100,800,0,0,0,this,1);
+        player2 = new Tank(1200,800,0,0,0,this,2);
+
+
     }
 };
 
