@@ -3,6 +3,7 @@
 
 #include "graphics.hpp"
 #include "widget.hpp"
+#include "szamw.hpp"
 
 using namespace genv;
 using namespace std;
@@ -10,7 +11,7 @@ using namespace std;
 class Tank : public Widget
 {
     public:
-        Tank(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int jatekos_);
+        Tank(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_,szamw* szog_, int jatekos_);
         virtual ~Tank();
 
         virtual void draw();
@@ -19,6 +20,7 @@ class Tank : public Widget
 
     protected:
         int jatekos;
+        szamw* szog;
 
     private:
 };

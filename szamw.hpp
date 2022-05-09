@@ -19,6 +19,8 @@ class szamw : public Widget
 
         virtual bool is_checked() ;
 
+        int getszam() { return _szam; };
+
 
     protected:
         int _szam, _miin, _maax;

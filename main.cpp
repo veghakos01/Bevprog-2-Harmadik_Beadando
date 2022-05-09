@@ -48,8 +48,8 @@ public:
 
         szel = new kijelzo(W/2-25,50,50,50,1,this,0);
 
-        player1 = new Tank(100,800,0,0,0,this,1);
-        player2 = new Tank(1200,800,0,0,0,this,2);
+        player1 = new Tank(100,800,0,0,0,this,j1_szog,1);
+        player2 = new Tank(1200,800,0,0,0,this,j2_szog,2);
 
 
     }
