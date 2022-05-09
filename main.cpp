@@ -1,8 +1,8 @@
 #include "application.hpp"
-#include "scrolltext.hpp"
 #include "szamw.hpp"
 #include "kivalw.hpp"
 #include "Elem.hpp"
+#include "kijelzo.hpp"
 
 using namespace std;
 
@@ -10,7 +10,6 @@ using namespace std;
 class App : public Application
 {
 private:
-    //Scrolltext* s;
     szamw* j1_ero;
     szamw* j1_szog;
     kivalw* j1_lovedek;
@@ -19,11 +18,12 @@ private:
     szamw* j2_szog;
     kivalw* j2_lovedek;
 
+    kijelzo* szel;
+
 
 public:
     App(int w, int h) : Application(w,h)
     {
-        //s = new Scrolltext(140,60,1000,400,5,this);
         j1_ero = new szamw(50,50,100,50,5,this,50,0,100);
         j1_szog = new szamw(50,150,100,50,5,this,45,0,90);
         j1_lovedek = new kivalw(250,50,120,30,5,this,0);
@@ -41,6 +41,8 @@ public:
         j2_lovedek->add("A widget 3");
         j2_lovedek->add("A negy");
         j2_lovedek->add("megegy");
+
+        szel = new kijelzo(W/2-25,50,50,50,1,this,0);
     }
 };
 

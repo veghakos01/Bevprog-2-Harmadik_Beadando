@@ -19,6 +19,6 @@ void Hopehely::rajzol()
 
 void Hopehely::mozog(int dx, int dy)
 {
-    x_ = (x_ + dx) % 1500;
+    x_ = (x_ + dx + 1500) % 1500;
     y_ = (y_ + dy) % 800;
 }

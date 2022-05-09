@@ -3,22 +3,28 @@
 
 #include <vector>
 
+using namespace std;
+
 class Widget;
-class Widgets;
+class Hopehely;
+
 
 class Application
 {
 protected:
     int W;
     int H;
-    std::vector<Widget*> widgets;
-    std::vector<Widgets*> widgs;
+    vector<Widget*> widgets;
+    vector<Hopehely*> hav;
+    int szel;
 public:
     Application(int W_, int H_);
     void event_loop();
     void feltolt(Widget* widget);
-    void fel(Widgets* wid);
+    void havak();
     void clearscreen();
+    void setszel(int a) { szel = a; }
+    int getszel() { return szel; }
 };
 
 #endif // APPLICATION_HPP
