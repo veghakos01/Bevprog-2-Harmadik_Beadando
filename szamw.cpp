@@ -5,8 +5,8 @@
 using namespace genv;
 using namespace std;
 
-szamw::szamw(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int szam, int miin, int maax)
-            : Widget(x_,y_,_size_x,_size_y,_frame_size,parent_), _szam(szam), _miin(miin), _maax(maax)
+szamw::szamw(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int szam, int miin, int maax, int jatekos_)
+            : Widget(x_,y_,_size_x,_size_y,_frame_size,parent_), _szam(szam), _miin(miin), _maax(maax), jatekos(jatekos_)
 {
     _checked=false;
     //ctor
@@ -49,6 +49,9 @@ void szamw::draw()
 
 void szamw::handle(event ev)
 {
+if(parent->getki() == jatekos)
+{
+
     if (ev.type == ev_mouse && ev.pos_x>x && ev.pos_x<x + size_x && ev.pos_y>y && ev.pos_y<y + size_y && ev.button==btn_left)
     {
         _checked = true;
@@ -112,6 +115,9 @@ void szamw::handle(event ev)
             }
 
         }
+}
+else
+    _checked = false;
 
 }
 

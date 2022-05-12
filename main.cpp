@@ -28,8 +28,8 @@ private:
 public:
     App(int w, int h) : Application(w,h)
     {
-        j1_ero = new szamw(50,50,100,50,5,this,50,0,100);
-        j1_szog = new szamw(50,150,100,50,5,this,45,0,90);
+        j1_ero = new szamw(50,50,100,50,5,this,50,0,100,1);
+        j1_szog = new szamw(50,150,100,50,5,this,45,0,90,1);
         j1_lovedek = new kivalw(250,50,120,30,5,this,0);
         j1_lovedek->add("A widget 1");
         j1_lovedek->add("A  2");
@@ -37,8 +37,8 @@ public:
         j1_lovedek->add("A negy");
         j1_lovedek->add("valami");
 
-        j2_ero = new szamw(W-185,50,100,50,5,this,50,0,100);
-        j2_szog = new szamw(W-185,150,100,50,5,this,45,0,90);
+        j2_ero = new szamw(W-185,50,100,50,5,this,50,0,100,2);
+        j2_szog = new szamw(W-185,150,100,50,5,this,45,0,90,2);
         j2_lovedek = new kivalw(W-355,50,120,30,5,this,0);
         j2_lovedek->add("A widget 1");
         j2_lovedek->add("A  2");

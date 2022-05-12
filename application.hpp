@@ -17,6 +17,7 @@ protected:
     vector<Widget*> widgets;
     vector<Hopehely*> hav;
     int szel;
+    int ki;
 public:
     Application(int W_, int H_);
     void event_loop();
@@ -25,6 +26,7 @@ public:
     void clearscreen();
     void setszel(int a) { szel = a; }
     int getszel() { return szel; }
+    int getki() { return ki; }
 };
 
 #endif // APPLICATION_HPP

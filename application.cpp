@@ -2,6 +2,7 @@
 #include "widget.hpp"
 #include "graphics.hpp"
 #include "Hopehely.hpp"
+#include "Tank.hpp"
 #include "iostream"
 #include "time.h"
 #include "math.h"
@@ -14,7 +15,8 @@ Application::Application(int W_, int H_) : W(W_), H(H_)
     //gout.load_font("LiberationSans-Regular.ttf",20);
     gout.open(W_, H_);
     gout << refresh;
-    szel = -10;
+    szel = 10;
+    ki = 1;
 }
 
 void Application::clearscreen()
@@ -71,6 +73,18 @@ void Application::event_loop()
     {
         hav[i]->rajzol();
     }
+
+    if(ev.keycode == key_space)
+    {
+        if(ki == 1)
+            ki = 2;
+        else if(ki == 2)
+            ki =1;
+        szel = rand() % 20 - 10;
+    }
+
+
+
 
 
         for (size_t i = 0; i < widgets.size(); i++)

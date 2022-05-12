@@ -10,7 +10,7 @@ using namespace std;
 class szamw : public Widget
 {
     public:
-        szamw(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int szam, int miin, int maax);
+        szamw(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int szam, int miin, int maax, int jatekos_);
         virtual ~szamw();
 
         virtual void draw();
@@ -23,7 +23,7 @@ class szamw : public Widget
 
 
     protected:
-        int _szam, _miin, _maax;
+        int _szam, _miin, _maax, jatekos;
         bool _checked;
 
     private:

@@ -77,10 +77,65 @@ void Tank::draw()
 
 }
 
-void Tank::handle(event ev)
+void Tank::loves()
 {
+    float agyu1 = szog->getszam();
+    int e = 100;
+    if(parent->getki() == 1 && jatekos == 1)
+    {
+        //gout << move_to(x+200,y-200) << color(200,0,0) << box(10,10);
+        int ero = 50;
+        //int szog = 60;
+        gout << move_to(100,800);
+        gout << move_to(x+70+cos(agyu1*PI/180)*e,y-100-sin(agyu1*PI/180)*e);
+        double x = 1;
+        double y = 1;
+
+        for(int i = 0; i < 100; i++)
+        {
+            x = ero * i * cos(szog->getszam()*PI/180.0);
+            y = ero * i * sin(szog->getszam()*PI/180.0) - 6*(i*i);
+            //double b =;
+            //y = x * tan(szog*PI/180.0) * ero - 100*i/(2*ero*ero*cos(szog*PI/180.0)*(x*x));
+
+
+
+            //gout << color(200,100,100) << move_to(100+x,800-y) << dot;
+            gout << color(200,0,0) << line(x,-y);
+
+            //x = x + 0.1;
+        }
+    }
+
+    if(parent->getki() == 2 && jatekos == 2)
+    {
+        gout << move_to(x-60,y-200) << color(200,0,0) << box(10,10);
+    }
+
 
 }
+
+void Tank::handle(event ev)
+{
+    if(ev.keycode == key_enter)
+    {
+        loves();
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
