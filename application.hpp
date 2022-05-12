@@ -18,6 +18,8 @@ protected:
     vector<Hopehely*> hav;
     int szel;
     int ki;
+    bool jatek;
+    void endscreen();
 public:
     Application(int W_, int H_);
     void event_loop();
@@ -27,6 +29,8 @@ public:
     void setszel(int a) { szel = a; }
     int getszel() { return szel; }
     int getki() { return ki; }
+    void setjatek(bool a) {jatek = a;}
+    bool getjatek() {return jatek;}
 };
 
 #endif // APPLICATION_HPP

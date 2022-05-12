@@ -1,7 +1,7 @@
 #include "kijelzo.hpp"
 #include "graphics.hpp"
 #include "sstream"
-
+#include "iostream"
 
 kijelzo::kijelzo(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_, int szam)
             : Widget(x_,y_,_size_x,_size_y,_frame_size,parent_), _szam(szam)
@@ -18,10 +18,15 @@ void kijelzo::draw()
 {
     gout.load_font("LiberationSans-Regular.ttf",20);
 
-    _szam = parent->getszel();
+    if(_szam == 1)
+        kinn = parent->getszel();
+    if(_szam == 2)
+        kinn = parent->getki();
 
     stringstream ss;
-    ss << _szam;
+    ss << kinn;
+    if(_szam == 2)
+        ss << ".jatekos";
     string num;
     ss >> num;
 
@@ -33,7 +38,6 @@ void kijelzo::draw()
 
 void kijelzo::handle(event ev)
 {
-
 }
 
 

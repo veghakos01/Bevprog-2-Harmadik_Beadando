@@ -19,7 +19,7 @@ class kijelzo : public Widget
         virtual void handle(genv::event ev);
 
     protected:
-        int _szam;
+        int _szam, kinn;
 
     private:
 };

@@ -34,6 +34,8 @@ class Elem : public Widget
 
         void valt(bool);
 
+        string gettext() {return _text;}
+
     protected:
         int height, start;
         string _text;

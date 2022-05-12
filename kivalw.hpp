@@ -29,10 +29,12 @@ class kivalw : public Widget
 
         int getv();
 
+        vector<Elem*> e;
+
     protected:
         int _db, kezd, veg;
         bool _checked, started;
-        vector<Elem*> e;
+
 
     private:
 };

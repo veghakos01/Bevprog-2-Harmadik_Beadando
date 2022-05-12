@@ -95,5 +95,29 @@ void Application::event_loop()
 
 
         gout << refresh;
+
+        if(!jatek)
+            endscreen();
+
     }
 }
+
+void Application::endscreen()
+{
+    gout << color(0,0,0) << move_to(0,0) << box(W,H);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
