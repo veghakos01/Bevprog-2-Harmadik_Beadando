@@ -77,6 +77,8 @@ void Application::event_loop()
         {
             hav[i]->mozog(rand() % 7 - 3 + szel, rand() % 15 - 2);
         }
+        if(szel==0)
+            szel=1;
     }
     for (size_t i=0; i<hav.size(); i++)
     {
@@ -103,7 +105,7 @@ void Application::event_loop()
         else if(ki == 2)
             ki =1;
         szel = rand() % 20 - 10;
-        cout << ki << endl;
+        //cout << ki << endl;
     }
 //////////////////////////////////////////////////////////////////////////
     if(ev.keycode == key_backspace)
@@ -174,6 +176,12 @@ void Application::event_loop()
                     }
 
 
+                    ki = 2;
+                    szel = rand() % 20 - 10;
+
+
+
+
 
 
                 }
@@ -242,7 +250,8 @@ void Application::event_loop()
                             gout << color(255-i,255-i,255-i) << move_to(0,0) << box(1500,900) << refresh;
                     }
 
-
+                    ki = 2;
+                    szel = rand() % 20 - 10;
 
 
                 }
