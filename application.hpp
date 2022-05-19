@@ -7,7 +7,7 @@ using namespace std;
 
 class Widget;
 class Hopehely;
-
+class Tank;
 
 class Application
 {
@@ -16,6 +16,7 @@ protected:
     int H;
     vector<Widget*> widgets;
     vector<Hopehely*> hav;
+    vector<Tank*> players;
     int szel;
     int ki;
     bool jatek;
@@ -25,6 +26,7 @@ public:
     void event_loop();
     void feltolt(Widget* widget);
     void havak();
+    void jatekosok(Tank* vki);
     void clearscreen();
     void setszel(int a) { szel = a; }
     int getszel() { return szel; }

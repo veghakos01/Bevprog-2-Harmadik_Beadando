@@ -13,10 +13,12 @@ protected:
     int size_y;
     int frame_size;
     Application* parent;
+
 public:
     Widget(int x_, int y_, int _size_x, int _size_y, int _frame_size, Application* parent_);
     virtual void draw() = 0;
     virtual void handle(genv::event ev) = 0;
+    int getframe() {return frame_size;};
 };
 
 #endif // WIDGET_HPP
