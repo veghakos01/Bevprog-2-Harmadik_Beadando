@@ -17,7 +17,7 @@ protected:
     vector<Widget*> widgets;
     vector<Hopehely*> hav;
     vector<Tank*> players;
-    int szel;
+    double szel;
     int ki;
     bool jatek;
     void endscreen();
